@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento Cohafuma</title>
+  <link href="../../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../../monitoramento-main-estilos.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<!-- Inclua a biblioteca Lottie -->
+<script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player"></script>
+
+<body>
+  <section class="container-principal">
+    <div class="arrow-left">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="pink" class="bi bi-arrow-left-short"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+      </svg>
+    </div>
+    <div class="div-teste">
+      <div class="div-monitoramento">
+        <div>
+          <h1>Monitoramento</h1>
+          <span id="data-hora"></span>
+        </div>
+        <p id="texto-monitoramento">Acompanhe o desenvolvimento escolar de Suporte Acolher com o nosso sistema de monitoramento ao vivo</p>
+      </div>
+      <ul class="botoes__page-view">
+        <li class="buttons-monitoramento botoes__page-view__item active">
+          <div id="botao-areas-da-escola">Áreas da Escola</div>
+        </li>
+        <li class="buttons-monitoramento botoes__page-view__item">
+          <div id="botao-salas-de-aula">Salas de Aula</div>
+        </li>
+        <li class="buttons-monitoramento botoes__page-view__item">
+          <div id="botao-multicameras">Multicâmeras</div>
+        </li>
+      </ul>
+
+      <!-- SWIPER ÁREAS DA ESCOLA -->
+      <div class="areasdaescola pageView-page">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-mindmakers">
+              <!-- MINDMAKERS -->
+              <div class="teste">
+                <h1>Mind Makers</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/mindmakers-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="teste swiper-slide slide-socioemocional">
+              <!-- SOCIOEMOCIONAL -->
+              <div class="teste">
+                <h1>Socioemocional</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/home-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="teste swiper-slide slide-multidisciplinar">
+              <!-- MULTIDISCIPLINAR -->
+              <div class="teste">
+                <h1>Multidisciplinar</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/multidisciplinar-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="teste swiper-slide slide-parquinho">
+              <!-- PARQUINHO -->
+              <div class="teste">
+                <h1>Parquinho</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/parquinho-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="teste swiper-slide slide-refeitorio">
+              <!-- REFEITÓRIO -->
+              <div class="teste">
+                <h1>Refeitório</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/refeitorio-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="teste swiper-slide slide-brinquedoteca">
+              <!-- BRINQUEDOTECA -->
+              <div class="teste">
+                <h1>Brinquedoteca</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/brinquedoteca-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- SWIPER SAlAS DE AULA -->
+      <div class="salasdeaula pageView-page areas-none">
+        <div class="swiper mySwiper" data-page="salasdeaula">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-bercario">
+              <!-- BERÇÁRIO -->
+              <div class="teste">
+                <h1 class="slide-titulo">Berçário</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/bercario-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-1">
+              <!-- INFANTIL 1 -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 1</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil1-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-1b">
+              <!-- INFANTIL 1B -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 1B</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil1-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-2">
+              <!-- INFANTIL 2 -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 2</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil1-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-2b">
+              <!-- INFANTIL 2B -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 2B</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil1-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-3">
+              <!-- INFANTIL 3 -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 3</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil1-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-3b">
+              <!-- INFANTIL 3B -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 3B</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil3b-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-4">
+              <!-- INFANTIL 4 -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 4</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil1-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-infantil-4b">
+              <!-- INFANTIL 4B -->
+              <div class="teste">
+                <h1 class="slide-titulo">Infantil 4B</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/infantil3b-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-primeiroano">
+              <!-- PRIMEIRO ANO -->
+              <div class="teste">
+                <h1 class="slide-titulo">Primeiro Ano</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/primeiroano-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-primeiroanob">
+              <!-- PRIMEIRO ANO B -->
+              <div class="teste">
+                <h1 class="slide-titulo">Primeiro Ano B</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/primeiroano-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-segundoano">
+              <!-- SEGUNDO ANO -->
+              <div class="teste">
+                <h1 class="slide-titulo">Segundo Ano</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/primeiroano-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-segundoanob">
+              <!-- SEUGUNDO ANO B -->
+              <div class="teste">
+                <h1 class="slide-titulo">Segundo Ano B</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/primeiroano-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-reforco">
+              <!-- REFORCO -->
+              <div class="teste">
+                <h1 class="slide-titulo">Reforço</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/reforco-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+            <div class="swiper-slide slide-minimaternal">
+              <!-- MINI MATERNAL -->
+              <div class="teste">
+                <h1 class="slide-titulo">Mini Maternal</h1>
+                <lottie-player id="animacao" src="../../../app-assets/lotties/minimaternal-animacao.json"
+                  background="transparent" speed="1" loop autoplay></lottie-player>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="multicameras row-multicameras pageView-page areas-none" data-page="multicameras">
+        <div class="row-multicameras__item">
+          <!-- SOCIOEMOCIONAL -->
+          <div class="item__container item-socioemocional">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Socioemocional</h1>
+          </div>
+          <!-- MULTIDISCIPLINAR -->
+          <div class="item__container item-multidisciplinar">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Multidisciplinar</h1>
+          </div>
+          <!-- MULTIDISCIPLINAR 2 -->
+          <div class="item__container item-multidisciplinar">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Multidisciplinar 2</h1>
+          </div>
+          <!-- PARQUINHO -->
+          <div class="item__container item-parquinho">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Parquinho</h1>
+          </div>
+          <!-- PARQUINHO 2 -->
+          <div class="item__container item-parquinho">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Parquinho 2</h1>
+          </div>
+          <!-- PARQUINHO 3 -->
+          <div class="item__container item-parquinho">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Parquinho 3</h1>
+          </div>
+          <!-- PARQUINHO 4 -->
+          <div class="item__container item-parquinho">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Parquinho 4</h1>
+          </div>
+          <!-- REFEITÓRIO -->
+          <div class="item__container item-refeitorio">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Refeitório</h1>
+          </div>
+          <!-- REFEITÓRIO 2 -->
+          <div class="item__container item-refeitorio">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Refeitório 2</h1>
+          </div>
+          <!-- REFEITÓRIO 3 -->
+          <div class="item__container item-refeitorio">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Refeitório 3</h1>
+          </div>
+          <!-- REFEITÓRIO 4 -->
+          <div class="item__container item-refeitorio">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Refeitório 4</h1>
+          </div>
+          <!-- BERÇÁRIO -->
+          <div class="item__container item-bercario">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Berçário</h1>
+          </div>
+          <!-- BERÇÁRIO 2 -->
+          <div class="item__container item-bercario">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Berçário 2</h1>
+          </div>
+          <!-- BERÇÁRIO 3 -->
+          <div class="item__container item-bercario">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Berçário 3</h1>
+          </div>
+          <!-- INFANTIL 1 -->
+          <div class="item__container item-infantil-1">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 1</h1>
+          </div>
+          <!-- INFANTIL 1B -->
+          <div class="item__container item-infantil-1b">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 1B</h1>
+          </div>
+          <!-- INFANTIL 2 -->
+          <div class="item__container item-infantil-2">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 2</h1>
+          </div>
+          <!-- INFANTIL 2B -->
+          <div class="item__container item-infantil-2b">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 2B</h1>
+          </div>
+          <!-- INFANTIL 3 -->
+          <div class="item__container item-infantil-3">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 3</h1>
+          </div>
+          <!-- INFANTIL 3B -->
+          <div class="item__container item-infantil-3b">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 3B</h1>
+          </div>
+          <!-- INFANTIL 4 -->
+          <div class="item__container item-infantil-4">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 4</h1>
+          </div>
+          <!-- INFANTIL 4B -->
+          <div class="item__container item-infantil-4b">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Infantil 4B</h1>
+          </div>
+          <!-- PRIMEIRO ANO -->
+          <div class="item__container item-primeiroano">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Primeiro Ano</h1>
+          </div>
+          <!-- PRIMEIRO ANO B -->
+          <div class="item__container item-primeiroanob">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Primeiro Ano B</h1>
+          </div>
+          <!-- SEGUNDO ANO -->
+          <div class="item__container item-segundoano">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Segundo Ano</h1>
+          </div>
+          <!-- SEGUNDO ANO B -->
+          <div class="item__container item-segundoanob">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Segundo Ano B</h1>
+          </div>
+          <!-- REFEITÓRIO MINI -->
+          <div class="item__container item-refeitorio">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Refeitório Mini</h1>
+          </div>
+          <!-- MINI MATERNAL -->
+          <div class="item__container item-minimaternal">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Mini Maternal</h1>
+          </div>
+          <!-- REFORÇO -->
+          <div class="item__container item-reforco">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Reforço</h1>
+          </div>
+          <!-- REFORÇO 2 -->
+          <div class="item__container item-reforco">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Reforço 2</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Swiper JS -->
+  <script>
+    function atualizarDataHora() {
+      var dataHoraAtual = moment().format('HH:mm:ss DD/MM/YYYY');
+      document.getElementById('data-hora').innerHTML = dataHoraAtual;
+    }
+    // Chamar a função uma vez para exibir a data e hora atual imediatamente
+    atualizarDataHora();
+
+    // Chamar a função a cada segundo para atualizar a data e hora
+    setInterval(atualizarDataHora, 1000);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="../../../js/app/monitoramento-main-main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+:root {
+    --cor-de-fundo: #D6EAFF;
+    --cor-fonte-principal: #FFFFFF;
+    --cor-container-unidade: #FF9DFE;
+    --cor-container-chat: #213B74;
+    --fonte-principal: "Roboto", sans-serif;
+    --cor-nova-mensagem: #ee53ed;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-fonte-principal);
+}
+
+.container__secundario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__foto-de-perfil {
+    display: flex;
+    justify-content: space-between;
+}
+
+.usuario-autenticado__foto-de-perfil {
+    margin: 44px 16px 0 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.home__bem-vindo {
+    margin: 20px 0 20px 16px;
+    font-size: 24px;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.home__unidade-titulo {
+    font-size: 19px;
+    width: 48.346%;
+    padding: 7px 0 7px 36px;
+    background-color: var(--cor-container-chat);
+    margin: 15px 0;
+    border-radius: 0 16px 16px 0;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.unidades-secao__unidade {
+    background-color: var(--cor-container-unidade);
+    margin: 16px 0 0 0;
+    width: 40%;
+    padding: 20px 0 20px 16px;
+    border-radius: 0 22px 22px 0;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.home__chat {
+    background-color: white;
+    padding: 14px 0;
+    border-radius: 40px 40px 0 0;
+    margin-top: 40px;
+}
+
+.chat__titulo {
+    color: var(--cor-container-chat);
+    font-size: 20px;
+    margin: 0 0 0 16px;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.chat-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-container-chat);
+    margin: 12px 12px 90px 12px;
+    border-radius: 18px;
+    padding: 10px;
+}
+
+.ultima-mensagem__foto-de-perfil {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chat-container__mensagem {
+    overflow-wrap: break-word;
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ultima-mensagem__foto-de-perfil {
+    align-self: center;
+}
+
+.mensagem__nome-do-chat {
+    font-family: var(--fonte-principal);
+    font-weight: 900;
+}
+
+.mensagem__texto {
+    font-family: var(--fonte-principal);
+    font-weight: 300;
+}
+
+#usuario {
+    font-weight: 700;
+}
+
+.mensagem__hora {
+    font-family: var(--fonte-principal);
+}
+
+.chat__icones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icones__nova-mensagem {
+    background-color: var(--cor-nova-mensagem);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
+}

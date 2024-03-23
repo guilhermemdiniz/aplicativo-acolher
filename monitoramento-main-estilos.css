@@ -1,0 +1,463 @@
+/* 
+:root {
+    --cor-mindmakers: #38DBE5;
+    --cor-socioemocional: #CD6BF0;
+    --cor-multidisciplinar: #BC98F3;
+    --cor-parquinho: #7DBEFA;
+    --cor-refeitorio: #ee7fe8;
+    --cor-brinquedoteca: #7DBEFA;
+    --cor-bercario: #FFB2D8;
+    --cor-infantil-1: #B8BCFF;
+    --cor-infantil-1b: #DADBFF;
+    --cor-infantil-2: #6A0785;
+    --cor-infantil-2b: #6A0785;
+    --cor-infantil-3: #6A0785;
+    --cor-infantil-3b: #FACD00;
+    --cor-infantil-4: #2A4480;
+    --cor-infantil-4b: #FACD00;
+    --cor-primeiroano: #7DBEFA;
+    --cor-primeiroanob: #7DBEFA;
+    --cor-segundoano: #7DBEFA;
+    --cor-segundoanob: #7DBEFA;
+    --cor-reforco: #C25C98;
+    --cor-minimaternal: #EE53ED;
+
+    --cor-botao-clicado: #EE53ED;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#botao-areas-da-escola {
+    width: 150px;
+}
+
+.botoes__page-view {
+    display: flex;
+    gap: 5px;
+}
+
+.botoes__page-view__item {
+    text-align: center;
+    background-color: #EFF4F8;
+    padding: 10px;
+    border-radius: 24px;
+}
+
+.active {
+    background-color: var(--cor-botao-clicado);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+    width: 171px;
+    height: 214px;
+}
+
+.slide-mindmakers {
+    background-color: var(--cor-mindmakers);
+}
+
+.slide-socioemocional {
+    background-color: var(--cor-socioemocional);
+}
+
+.slide-multidisciplinar {
+    background-color: var(--cor-multidisciplinar);
+}
+
+.slide-parquinho {
+    background-color: var(--cor-parquinho);
+}
+
+.slide-refeitorio {
+    background-color: var(--cor-refeitorio);
+}
+
+.slide-brinquedoteca {
+    background-color: var(--cor-brinquedoteca);
+}
+
+.slide-bercario {
+    background-color: var(--cor-bercario);
+}
+
+.slide-infantil-1 {
+    background-color: var(--cor-infantil-1);
+}
+
+.slide-infantil-1b {
+    background-color: var(--cor-infantil-1b);
+}
+
+.slide-infantil-2 {
+    background-color: var(--cor-infantil-2);
+}
+
+.slide-infantil-2b {
+    background-color: var(--cor-infantil-2b);
+}
+
+.slide-infantil-3 {
+    background-color: var(--cor-infantil-3);
+}
+
+.slide-infantil-3b {
+    background-color: var(--cor-infantil-3b);
+}
+
+.slide-infantil-4 {
+    background-color: var(--cor-infantil-4);
+}
+
+.slide-infantil-4b {
+    background-color: var(--cor-infantil-4b);
+}
+
+.slide-primeiroano {
+    background-color: var(--cor-primeiroano);
+}
+
+.slide-primeiroanob {
+    background-color: var(--cor-primeiroanob);
+}
+
+.slide-segundoano {
+    background-color: var(--cor-segundoano);
+}
+
+.slide-segundoanob {
+    background-color: var(--cor-segundoanob);
+}
+
+.slide-reforco {
+    background-color: var(--cor-reforco);
+}
+
+.slide-minimaternal {
+    background-color: var(--cor-minimaternal);
+}
+    
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidden {
+    display: none;
+} */
+
+
+
+:root {
+    --cor-mindmakers: #38DBE5;
+    --cor-socioemocional: #CD6BF0;
+    --cor-multidisciplinar: #BC98F3;
+    --cor-parquinho: #7DBEFA;
+    --cor-refeitorio: #ee7fe8;
+    --cor-brinquedoteca: #7DBEFA;
+    --cor-bercario: #FFB2D8;
+    --cor-infantil-1: #B8BCFF;
+    --cor-infantil-1b: #DADBFF;
+    --cor-infantil-2: #6A0785;
+    --cor-infantil-2b: #6A0785;
+    --cor-infantil-3: #6A0785;
+    --cor-infantil-3b: #FACD00;
+    --cor-infantil-4: #2A4480;
+    --cor-infantil-4b: #FACD00;
+    --cor-primeiroano: #7DBEFA;
+    --cor-primeiroanob: #7DBEFA;
+    --cor-segundoano: #7DBEFA;
+    --cor-segundoanob: #7DBEFA;
+    --cor-reforco: #C25C98;
+    --cor-minimaternal: #EE53ED;
+
+    --cor-botao-clicado: #EE53ED;
+}
+
+body {
+    background-color: #2A4480;
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botoes__page-view {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0px 10px;
+
+    padding-bottom: 25px;
+}
+
+.botoes__page-view__item {
+    text-align: center;
+    background-color: #EFF4F8;
+    padding: 15px 15px;
+    border-radius: 24px;
+
+    font-size: 12px;
+}
+
+.active {
+    background-color: var(--cor-botao-clicado);
+    color: white;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.teste {
+    height: 214px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.swiper-slide{
+    border-radius: 25px;
+}
+
+.swiper-slide h1{
+    max-width: max-content;
+
+    color: white;
+    justify-content: center;
+
+    border-radius: 25px;
+    padding-left: 50px;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.slide-mindmakers {
+    background-color: var(--cor-mindmakers);
+}
+
+.slide-socioemocional {
+    background-color: var(--cor-socioemocional);
+}
+
+.slide-multidisciplinar {
+    background-color: var(--cor-multidisciplinar);
+}
+
+.slide-parquinho {
+    background-color: var(--cor-parquinho);
+}
+
+.slide-refeitorio {
+    background-color: var(--cor-refeitorio);
+}
+
+.slide-brinquedoteca {
+    background-color: var(--cor-brinquedoteca);
+}
+
+.slide-bercario {
+    background-color: var(--cor-bercario);
+}
+
+.slide-infantil-1 {
+    background-color: var(--cor-infantil-1);
+}
+
+.slide-infantil-1b {
+    background-color: var(--cor-infantil-1b);
+}
+
+.slide-infantil-2 {
+    background-color: var(--cor-infantil-2);
+}
+
+.slide-infantil-2b {
+    background-color: var(--cor-infantil-2b);
+}
+
+.slide-infantil-3 {
+    background-color: var(--cor-infantil-3);
+}
+
+.slide-infantil-3b {
+    background-color: var(--cor-infantil-3b);
+}
+
+.slide-infantil-4 {
+    background-color: var(--cor-infantil-4);
+}
+
+.slide-infantil-4b {
+    background-color: var(--cor-infantil-4b);
+}
+
+.slide-primeiroano {
+    background-color: var(--cor-primeiroano);
+}
+
+.slide-primeiroanob {
+    background-color: var(--cor-primeiroanob);
+}
+
+.slide-segundoano {
+    background-color: var(--cor-segundoano);
+}
+
+.slide-segundoanob {
+    background-color: var(--cor-segundoanob);
+}
+
+.slide-reforco {
+    background-color: var(--cor-reforco);
+}
+
+.slide-minimaternal {
+    background-color: var(--cor-minimaternal);
+}
+    
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+/*CSS WILLIAN*/
+.multicameras {
+    display: flex;
+    justify-content: center;
+}
+
+.container-principal {
+    background-color: #2A4480;
+
+}
+
+.div-teste {
+    margin-top: 100px;
+    background-color: white;
+
+    border-radius: 35px 35px 0px 0px;
+
+    height: 100vh;
+}
+
+.div-monitoramento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding: 25px;
+}
+
+.div-monitoramento div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #2A4480;
+
+}
+
+.div-monitoramento div h1 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.div-monitoramento p {
+    padding: 0px 25px;
+    color: #2A4480;
+
+}
+
+.salasdeaula, .areasdaescola{
+    padding: 15px;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+}
+
+.areas-none {
+    display: none;
+    background-color: #EFF4F8;
+
+}
+
+.teste-iframe {
+    height: 150px;
+    width: 40%;
+    pointer-events: none;
+}
+
+.teste h1 {
+    font-size: 18px;
+}
+
+/*Guilherme*/
+.row-multicameras__item {
+    display: flex;
+    overflow-x: auto;
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.item-titulo {
+    background-color: var(--cor-botao-clicado);
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    padding: 20px 0 14px 20px;
+    border-radius: 0 0 14px 14px;
+}
+
+#animacao {
+    width: 150px; height: 150px;
+}

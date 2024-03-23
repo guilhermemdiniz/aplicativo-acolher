@@ -1,0 +1,17 @@
+
+{
+  "salas":[
+    {
+      "id": "refeitorio",
+      "nome": "Refeitório",
+      "cor": "#B6F25AA3",
+      "animacao": "app-assets/lotties/refeitorio-animacao.json"
+    },
+    {
+      "id": "bercario",
+      "nome": "bercario",
+      "cor": "#B6F25AA3",
+      "animacao": "app-assets/lotties/refeitorio-animacao.json"
+    }
+  ]
+}
