@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
+<!-- Inclua a biblioteca Lottie -->
+<script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player"></script>
+
 <body>
     <div class="container__foto-de-perfil">
         <div></div>
@@ -32,13 +35,13 @@
                     Turu
                 </div>
             </section>
-            <lottie-player id="animacao" src="../app-assets/lotties/refeitorio-animacao.json" background="transparent"
+            <lottie-player id="animacao" src="../app-assets/lotties/home-animacao.json" background="transparent"
                 speed="1" loop autoplay></lottie-player>
         </div>
         <div class="home__chat">
             <h1 class="chat__titulo">Conversas</h1>
             <div class="chat-container">
-                <img class="ultima-mensagem__foto-de-perfil"
+                <!-- <img class="ultima-mensagem__foto-de-perfil"
                     src="https://i0.wp.com/www.clicandoeandando.com/wp-content/uploads/2017/09/Como-Fotografar-Paisagens-Com-Lente-Grande-Angular-Ubatuba.jpg"
                     alt="Foto de perfil do usuário">
                 <div class="chat-container__mensagem">
@@ -53,6 +56,12 @@
                 <div class="chat__icones">
                     <div class="icones__nova-mensagem"></div>
                     <span class="material-icons">chevron_right</span>
+                </div> -->
+                <lottie-player class="ultima-mensagem__foto-de-perfil" id="animacao-embreve" src="../app-assets/lotties/embreve-animacao.json" background="#D6EAFF"
+                speed="1" loop autoplay></lottie-player>
+                <div class="chat-container__mensagem">
+                    <h1 class="mensagem__nome-do-chat">O Chat estará disponível novamente em breve</h1>
+                    <p class="mensagem__texto">Estamos mudando o app de plataforma. Por esse motivo o chat ficará indisponível por um tempo. Qualquer problema, entre em contato com o Suporte.</p>
                 </div>
             </div>
         </div>

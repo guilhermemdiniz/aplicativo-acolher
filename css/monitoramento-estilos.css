@@ -45,6 +45,12 @@ body {
   font-weight: 300;
 }
 
+.arrow-left {
+  position: absolute;
+  top: 40px;
+  left: 25px;
+}
+
 .hidden {
   display: none;
 }

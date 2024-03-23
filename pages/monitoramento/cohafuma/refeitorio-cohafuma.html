@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Monitoramento</title>
-  <link href="/css/reset.css" rel="stylesheet" type="text/css" />
-  <link href="monitoramento-estilos.css" rel="stylesheet" type="text/css" />
+  <link href="../../../css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="../../../css/monitoramento-estilos.css" rel="stylesheet" type="text/css" />
 </head>
 
 <!-- Inclua a biblioteca Lottie -->
@@ -14,9 +14,16 @@
 
 <body>
   <p id="idPagina">refeitorio</p>
+  <div class="arrow-left">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-arrow-left-short"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+    </svg>
+  </div>
   <section class="monitoramento__container">
     <!-- ADIÇÃO DA LOTTIE ANIMATION -->
-    <lottie-player id="animacao" src="app-assets/lotties/refeitorio-animacao.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <lottie-player id="animacao" src="../../../app-assets/lotties/refeitorio-animacao.json" background="transparent" speed="1" loop autoplay></lottie-player>
     <!-- TITULO -->
     <h1 class="monitoramento__titulo">Refeitório</h1>
     <!-- DATA E HORA -->
@@ -26,6 +33,6 @@
   </section>
 </body>
 
-<script src="/js/app/sala-config.js" deffer></script>
+<script type="module" src="../../../js/app/sala-main-cohafuma.js" deffer></script>
 
 </html>

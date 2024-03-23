@@ -8,9 +8,22 @@ const auth = getAuth(app);
 
 //--------------------------- REGRAS DE VISUALIZAÇÃO ---------------------------
 
+//BOTÕES DAS UNIDADES
 const containerCohafuma = document.getElementById('unidade-cohafuma');
 const containerCohatrac = document.getElementById('unidade-cohatrac');
 const containerTuru = document.getElementById('unidade-turu');
+
+containerCohafuma.addEventListener('click', () => {
+  window.location.href = '../../pages/monitoramento/main/monitoramento-cohafuma.html';
+})
+
+containerCohatrac.addEventListener('click', () => {
+  window.location.href = '../../pages/monitoramento/main/monitoramento-cohafuma.html';
+})
+
+containerTuru.addEventListener('click', () => {
+  window.location.href = '../../pages/monitoramento/main/monitoramento-cohafuma.html';
+})
 
 //VERIFICAR VISIBILIDADE
 onAuthStateChanged(auth, async (user) => {
@@ -32,14 +45,14 @@ onAuthStateChanged(auth, async (user) => {
         document.querySelector('.usuario-autenticado__foto-de-perfil').setAttribute("src", authenticatedUser.data().display_name)
 
         //COHAFUMA
-        if(!authenticatedUser.data().isPaiCohafuma) {
+        if(!(authenticatedUser.data().isPaiCohafuma || authenticatedUser.data().isAdmin)) {
           containerCohafuma.classList.add('hidden');
         }
         //COHATRAC
-        if(!authenticatedUser.data().isPaiCohatrac) {
+        if(!(authenticatedUser.data().isPaiCohatrac || authenticatedUser.data().isAdmin)) {
           containerCohatrac.classList.add('hidden');
         //TURU
-        }if(!authenticatedUser.data().isPaiTuru) {
+        }if(!(authenticatedUser.data().isPaiTuru || authenticatedUser.data().isAdmin)) {
           containerTuru.classList.add('hidden');
         }
     } else {

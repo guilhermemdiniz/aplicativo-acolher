@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/login.css">
     <title>Login</title>
 </head>
 
@@ -12,17 +13,16 @@
         <h1 class="login__titulo">Login</h1>
 
         <form class="login__formulario">
-            <label id="email__label" for="formulario__email"></label>
-            <input class="formulario__item" id="formulario__email" type="email" placeholder="Digite seu Email" required>
+            <label id="email_label" for="formulario_email"></label>
+            <input class="formulario_item" id="formulario_email" type="email" placeholder="Digite seu Email" required>
 
-            <label id="senha__label" for="formulario__senha"></label>
-            <input class="formulario__item" id="formulario__senha" type="password" placeholder="Senha" required>
+            <label id="senha_label" for="formulario_senha"></label>
+            <input class="formulario_item" id="formulario_senha" type="password" placeholder="Senha" required>
 
-            <button type="submit">Acessar</button>
+            <p>Redefinir senha</p>
+            <button id="button-submit" type="submit">Acessar</button>
         </form>
-        <button id="botao__logout" type="button">Logout</button>
-        <button id="botao__cadastro" type="button">Cadastrar</button>
-      </section>
+    </section>
 </body>
 
 <script type="module" src="../../js/app/login-main.js"></script>

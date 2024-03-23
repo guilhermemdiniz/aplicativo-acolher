@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2A4480;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    text-decoration: underline;
+    color: #B8BCFF;
+}
+
+form {
+    gap: 10px;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+input {
+    margin: 0px 20px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #B8BCFF;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+p {
+    align-self: flex-end;
+    font-size: 15px;
+}
+
+.login__formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#button-submit {
+    background-color: #fc00fc;
+    max-width: min-content;
+    border: none;
+    padding: 15px 70px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
