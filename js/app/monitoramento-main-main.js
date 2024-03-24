@@ -79,112 +79,112 @@ onAuthStateChanged(auth, async (user) => {
         Acompanhe o desenvolvimento escolar de ${authenticatedUser.data().filhos} com o nosso sistema de monitoramento ao vivo
         `;
         //BERCARIO
-        if(!(authenticatedUser.data().isBercario || authenticatedUser.data().isAdmin)) {
-            containerBercario.classList.remove('swiper-slide');
-            containerBercario.classList.add('hidden');
+        if((authenticatedUser.data().isBercario || authenticatedUser.data().isAdmin)) {
+            containerBercario.classList.add('swiper-slide');
+            containerBercario.classList.remove('hidden');
 
-            webViewBercario.classList.add('hidden');
+            webViewBercario.classList.remove('hidden');
         }
         //INFANTIL 1
-        if(!(authenticatedUser.data().isInfantil1 || authenticatedUser.data().isAdmin)) {
-            containerInfantil1.classList.remove('swiper-slide');
-            containerInfantil1.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil1 || authenticatedUser.data().isAdmin)) {
+            containerInfantil1.classList.add('swiper-slide');
+            containerInfantil1.classList.remove('hidden');
 
-            webViewInfantil1.classList.add('hidden');
+            webViewInfantil1.classList.remove('hidden');
         }
         //INFANTIL 1B
-        if(!(authenticatedUser.data().isInfantil1B || authenticatedUser.data().isAdmin)) {
-            containerInfantil1B.classList.remove('swiper-slide');
-            containerInfantil1B.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil1B || authenticatedUser.data().isAdmin)) {
+            containerInfantil1B.classList.add('swiper-slide');
+            containerInfantil1B.classList.remove('hidden');
 
-            webViewInfantil1B.classList.add('hidden');
+            webViewInfantil1B.classList.remove('hidden');
         }
         //INFANTIL 2
-        if(!(authenticatedUser.data().isInfantil2 || authenticatedUser.data().isAdmin)) {
-            containerInfantil2.classList.remove('swiper-slide');
-            containerInfantil2.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil2 || authenticatedUser.data().isAdmin)) {
+            containerInfantil2.classList.add('swiper-slide');
+            containerInfantil2.classList.remove('hidden');
 
-            webViewInfantil2.classList.add('hidden');
+            webViewInfantil2.classList.remove('hidden');
         }
         //INFANTIL 2B
-        if(!(authenticatedUser.data().isInfantil2B || authenticatedUser.data().isAdmin)) {
-            containerInfantil2B.classList.remove('swiper-slide');
-            containerInfantil2B.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil2B || authenticatedUser.data().isAdmin)) {
+            containerInfantil2B.classList.add('swiper-slide');
+            containerInfantil2B.classList.remove('hidden');
 
-            webViewInfantil2B.classList.add('hidden');
+            webViewInfantil2B.classList.remove('hidden');
         }
         //INFANTIL 3
-        if(!(authenticatedUser.data().isInfantil3 || authenticatedUser.data().isAdmin)) {
-            containerInfantil3.classList.remove('swiper-slide');
-            containerInfantil3.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil3 || authenticatedUser.data().isAdmin)) {
+            containerInfantil3.classList.add('swiper-slide');
+            containerInfantil3.classList.remove('hidden');
 
-            webViewInfantil3.classList.add('hidden');
+            webViewInfantil3.classList.remove('hidden');
         }
         //INFANTIL 3B 
-        if(!(authenticatedUser.data().isInfantil3B || authenticatedUser.data().isAdmin)) {
-            containerInfantil3B.classList.remove('swiper-slide');
-            containerInfantil3B.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil3B || authenticatedUser.data().isAdmin)) {
+            containerInfantil3B.classList.add('swiper-slide');
+            containerInfantil3B.classList.remove('hidden');
 
-            webViewInfantil3B.classList.add('hidden');
+            webViewInfantil3B.classList.remove('hidden');
         }
         //INFANTIL 4
-        if(!(authenticatedUser.data().isInfantil4 || authenticatedUser.data().isAdmin)) {
-            containerInfantil4.classList.remove('swiper-slide');
-            containerInfantil4.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil4 || authenticatedUser.data().isAdmin)) {
+            containerInfantil4.classList.add('swiper-slide');
+            containerInfantil4.classList.remove('hidden');
 
-            webViewInfantil4.classList.add('hidden');
+            webViewInfantil4.classList.remove('hidden');
         }
         //INFANTIL 4B
-        if(!(authenticatedUser.data().isInfantil4B || authenticatedUser.data().isAdmin)) {
-            containerInfantil4B.classList.remove('swiper-slide');
-            containerInfantil4B.classList.add('hidden');
+        if((authenticatedUser.data().isInfantil4B || authenticatedUser.data().isAdmin)) {
+            containerInfantil4B.classList.add('swiper-slide');
+            containerInfantil4B.classList.remove('hidden');
 
-            webViewInfantil4B.classList.add('hidden');
+            webViewInfantil4B.classList.remove('hidden');
         }
         //PRIMEIRO ANO
-        if(!(authenticatedUser.data().isPrimeiroAno || authenticatedUser.data().isAdmin)) {
-            containerPrimeiroAno.classList.remove('swiper-slide');
-            containerPrimeiroAno.classList.add('hidden');
+        if((authenticatedUser.data().isPrimeiroAno || authenticatedUser.data().isAdmin)) {
+            containerPrimeiroAno.classList.add('swiper-slide');
+            containerPrimeiroAno.classList.remove('hidden');
             
-            webViewPrimeiroAno.classList.add('hidden');
+            webViewPrimeiroAno.classList.remove('hidden');
         }
         //PRIMEIRO ANO B
-        if(!(authenticatedUser.data().isPrimeiroAnoB || authenticatedUser.data().isAdmin)) {
-            containerPrimeiroAnoB.classList.remove('swiper-slide');
-            containerPrimeiroAnoB.classList.add('hidden');
+        if((authenticatedUser.data().isPrimeiroAnoB || authenticatedUser.data().isAdmin)) {
+            containerPrimeiroAnoB.classList.add('swiper-slide');
+            containerPrimeiroAnoB.classList.remove('hidden');
 
-            webViewPrimeiroAnoB.classList.add('hidden');
+            webViewPrimeiroAnoB.classList.remove('hidden');
         }
         //SEGUNDO ANO
-        if(!(authenticatedUser.data().isSegundoAno && authenticatedUser.data().isAdmin)) {
-            containerSegundoAno.classList.remove('swiper-slide');
-            containerSegundoAno.classList.add('hidden');
+        if((authenticatedUser.data().isSegundoAno && authenticatedUser.data().isAdmin)) {
+            containerSegundoAno.classList.add('swiper-slide');
+            containerSegundoAno.classList.remove('hidden');
 
-            webViewSegundoAno.classList.add('hidden');
+            webViewSegundoAno.classList.remove('hidden');
         }
         //SEGUNDO ANO B
-        if(!(authenticatedUser.data().isSegundoAnoB || authenticatedUser.data().isAdmin)) {
-            containerSegundoAnoB.classList.remove('swiper-slide');
-            containerSegundoAnoB.classList.add('hidden');
+        if((authenticatedUser.data().isSegundoAnoB || authenticatedUser.data().isAdmin)) {
+            containerSegundoAnoB.classList.add('swiper-slide');
+            containerSegundoAnoB.classList.remove('hidden');
 
-            webViewSegundoAnoB.classList.add('hidden');
+            webViewSegundoAnoB.classList.remove('hidden');
         }
         //REFORCO
-        if(!(authenticatedUser.data().isPrimeiroAno || authenticatedUser.data().isPrimeiroAnoB 
+        if((authenticatedUser.data().isPrimeiroAno || authenticatedUser.data().isPrimeiroAnoB 
         || authenticatedUser.data().isSegundoAno || authenticatedUser.data().isSegundoAnoB 
         || authenticatedUser.data().isReforco) || authenticatedUser.data().isAdmin) {
-            containerReforco.classList.remove('swiper-slide');
-            containerReforco.classList.add('hidden');
+            containerReforco.classList.add('swiper-slide');
+            containerReforco.classList.remove('hidden');
 
-            webViewReforco.classList.add('hidden');
+            webViewReforco.classList.remove('hidden');
         }
         //MINI MATERNAL
-        if(!authenticatedUser.data().isMiniMaternal) {
-            containerMiniMaternal.classList.remove('swiper-slide');
-            containerMiniMaternal.classList.add('hidden');
+        if(authenticatedUser.data().isMiniMaternal) {
+            containerMiniMaternal.classList.add('swiper-slide');
+            containerMiniMaternal.classList.remove('hidden');
 
 
-            webViewMiniMaternal.classList.add('hidden');
+            webViewMiniMaternal.classList.remove('hidden');
         }
 
     } else {
