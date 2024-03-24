@@ -458,6 +458,27 @@ body {
     border-radius: 0 0 14px 14px;
 }
 
+.navbar__container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 10px;
+    background-color: #ffffff7c;
+    backdrop-filter: blur(4px);
+    width: 300px;
+    border-radius: 26px;
+}
+
+.navbar__botoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 14px;
+}
+
 #animacao {
     width: 150px; height: 150px;
 }

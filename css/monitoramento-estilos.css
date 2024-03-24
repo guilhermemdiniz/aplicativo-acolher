@@ -51,6 +51,28 @@ body {
   left: 25px;
 }
 
+.navbar__container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 10px;
+  background-color: #ffffff7c;
+  backdrop-filter: blur(4px);
+  width: 300px;
+  border-radius: 26px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__botoes {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 14px;
+}
+
 .hidden {
   display: none;
 }
