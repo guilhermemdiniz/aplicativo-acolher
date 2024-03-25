@@ -6,6 +6,7 @@ import { getFirestore, collection, doc, setDoc } from "https://www.gstatic.com/f
 
 const formulario = document.querySelector('.login__formulario');
 const botaoLogout = document.getElementById('botao__logout');
+var usuarioAutenticado = false;
 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
@@ -17,12 +18,15 @@ formulario.addEventListener('submit', (evento) => {
 export const authenticatedUser = auth.currentUser;
 
 onAuthStateChanged(auth, (user) => {
+  console.log('auth sate changed')
   if (user) {
     const uid = user.uid;
     console.log(user);
-    window.location.href = '../../pages/home.html'
-  } else {
+    window.location.href = '../../pages/home.html';
+    usuarioAutenticado = true;
+  } else {;
     console.log("não autenticado");
+    usuarioAutenticado = false;
   }
 });
 

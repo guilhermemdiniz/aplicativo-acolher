@@ -1,3 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+:root {
+    --fonte-principal: 'Roboto', sans-serif;
+    --cor-fonte-principal: #807C8A;
+    --cor-de-fundo: #2A4480;
+    --cor-fonte-destaque: #217bcf;
+    --rosa: #EE53ED;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +16,12 @@
 }
 
 body {
-    background-color: #2A4480;
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+}
+
+.hidden {
+    display: none;
 }
 
 section {
@@ -13,8 +29,8 @@ section {
     flex-direction: column;
     background-color: white;
     height: 100vh;
-    margin: 20px;
-    border-radius: 10px;
+    margin: 50px 14px 14px 14px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
 
@@ -24,7 +40,7 @@ section {
 h1 {
     font-size: 40px;
     text-decoration: underline;
-    color: #B8BCFF;
+    color: var(--cor-fonte-principal);
 }
 
 form {
@@ -43,9 +59,11 @@ input {
     font-size: 20px;
 }
 
-p {
+.login__formulario p {
     align-self: flex-end;
-    font-size: 15px;
+    font-size: 16px;
+    color: var(--cor-fonte-destaque);
+    margin-bottom: 24px;
 }
 
 .login__formulario {
@@ -62,4 +80,26 @@ p {
     color: white;
     font-size: 20px;
     border-radius: 10px;
+}
+
+.button-loading {
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.637);
+    width: 100vw;
+    height: 100vh;
+}
+
+.button-loading p {
+    font-size: 24px;
+    color: var(--rosa);
+    font-weight: 600;
+    position: absolute; bottom: 30vh; left: 50%;
+    transform: translatex(-45%);
+}
+
+#animacao {
+    display: block;
+    width: 150px;
+    height: 150px;
 }

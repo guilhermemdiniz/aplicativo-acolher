@@ -3,6 +3,7 @@
 
 :root {
   --margin-top-container-principal: 80px;
+  --cor-de-fundo: #2C467F;
 }
 
 #idPagina {
@@ -10,7 +11,7 @@
 }
 
 body {
-  background-color: #DA092869;
+  background-color: #2C467F;
   margin: 0; /* Remova as margens padrão do body */
   padding: 0; /* Remova o preenchimento padrão do body */
   text-align: center;
@@ -27,7 +28,7 @@ body {
   background-color: white;
   margin-top: var(--margin-top-container-principal);
   width: 100vw;
-  height: calc(100vh - var(--margin-top-container-principal) - 30px);
+  min-height: calc(100vh - var(--margin-top-container-principal) - 30px);
   border-radius: 40px 40px 0 0;
   padding-top: 30px;
 }
@@ -43,6 +44,14 @@ body {
   font-size: 14px;
   margin: 10px 0 9px 0;
   font-weight: 300;
+}
+
+.monitoramento__webviews {
+  padding-bottom: 50px;
+}
+
+.webviews__item iframe {
+  margin-top: 24px;
 }
 
 .arrow-left {

@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/login.css">
     <title>Login</title>
 </head>
 
-<body>
-    <section>
-        <h1 class="login__titulo">Login</h1>
+<!-- Inclua a biblioteca Lottie -->
+<script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player"></script>
 
+<body>
+    <section class="login__container-principal">
+        <lottie-player id="animacao" src="../../app-assets/lotties/login-animacao.json"
+        background="transparent" speed="1" loop autoplay></lottie-player>
+        <h1 class="login__titulo">Login</h1>
         <form class="login__formulario">
             <label id="email_label" for="formulario_email"></label>
             <input class="formulario_item" id="formulario_email" type="email" placeholder="Digite seu Email" required>
@@ -20,7 +25,14 @@
             <input class="formulario_item" id="formulario_senha" type="password" placeholder="Senha" required>
 
             <p>Redefinir senha</p>
-            <button id="button-submit" type="submit">Acessar</button>
+            <button id="button-submit" type="submit">
+                Acessar
+            </button>
+            <div class="button-loading hidden">
+                <iframe id="animacao" src="https://lottie.host/embed/fcc5d9e9-1c69-40c8-8a43-6eaa5b09339f/rkb5aHGfUz.json" style="position: absolute; bottom: 32vh; left: 50%;
+                transform: translatex(-50%);"></iframe>
+                <p>Conectando...</p>
+            </div>
         </form>
     </section>
 </body>
