@@ -58,13 +58,13 @@ onAuthStateChanged(auth, async (user) => {
     } else {
         console.log("No such document!");
         alert('esta página não pode ser acessada');
-        window.location.href = '../../pages/auth/login.html';
+        window.location.href = '../../index.html';
     }
 
     console.log(user);
   } else {
     console.log('não há usuário autenticado');
     alert('esta página não pode ser acessada');
-    window.location.href = '../../pages/auth/login.html';
+    window.location.href = '../../index.html';
   }
 });
