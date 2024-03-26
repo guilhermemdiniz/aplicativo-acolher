@@ -17,13 +17,6 @@ botaoVoltar.addEventListener('click', () => {
     window.location.href = '../../home.html';
 })
 
-function mostrarElementos() {
-    const elementoLoading = document.querySelector('.loading');
-    const elementoPagina = document.querySelector('.pagina');
-    elementoLoading.classList.add('hidden');
-    elementoPagina.classList.remove('hidden');
-}
-
 //------------------------------------- REGRAS DE VISUALIZAÇÃO ---------------------------------------------
 
 //CONTAINERS ÁREAS DA ESCOLA
@@ -51,23 +44,6 @@ const containerSegundoAnoB = document.querySelector('.slide-segundoanob');
 const containerReforco = document.querySelector('.slide-reforco');
 const containerMiniMaternal = document.querySelector('.slide-minimaternal');
 
-//WEBVIEWS SALAS DE AULA
-const webViewBercario = document.querySelector('.item-bercario');
-const webViewInfantil1 = document.querySelector('.item-infantil-1');
-const webViewInfantil1B = document.querySelector('.item-infantil-1b');
-const webViewInfantil2 = document.querySelector('.item-infantil-2');
-const webViewInfantil2B = document.querySelector('.item-infantil-2b');
-const webViewInfantil3 = document.querySelector('.item-infantil-3');
-const webViewInfantil3B = document.querySelector('.item-infantil-3b');
-const webViewInfantil4 = document.querySelector('.item-infantil-4');
-const webViewInfantil4B = document.querySelector('.item-infantil-4b');
-const webViewPrimeiroAno = document.querySelector('.item-primeiroano');
-const webViewPrimeiroAnoB = document.querySelector('.item-primeiroanob');
-const webViewSegundoAno = document.querySelector('.item-segundoano');
-const webViewSegundoAnoB = document.querySelector('.item-segundoanob');
-const webViewReforco = document.querySelector('.item-reforco');
-const webViewMiniMaternal = document.querySelector('.item-minimaternal');
-
 //VERIFICAR VISIBILIDADE
 const auth = getAuth(app);
 
@@ -88,9 +64,6 @@ onAuthStateChanged(auth, async (user) => {
 
         mostrarAreasDaEscolaNoMulticameras();
         verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser);
-        
-        mostrarElementos();
-
     } else {
         console.log("No such document!");
         alert('esta página não pode ser acessada');
@@ -110,22 +83,22 @@ onAuthStateChanged(auth, async (user) => {
 //ÁREAS DA ESCOLA
 //--> MINDMAKERS
 containerMindMakers.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/mindmakers-cohafuma.html';
 })
 
 //--> SOCIOEMOCIONAL
 containerSocioemocional.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/socioemocional-cohafuma.html';
 })
 
 //--> MULTIDISCIPLINAR
 containerMultidisciplinar.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/multidisciplinar-cohafuma.html';
 })
 
 //--> PARQUINHO
 containerParquinho.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/parquinho-cohafuma.html';
 })
 
 //--> REFEITORIO
@@ -142,63 +115,63 @@ containerBrinquedoteca.addEventListener('click', () => {
 //SALAS DE AULA
 //--> BERÇÁRIO
 containerBercario.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/bercario-cohafuma.html';
 })
 //--> INFANTIL 1
 containerInfantil1.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil1-cohafuma.html';
 })
 //--> INFANTIL 1B
 containerInfantil1B.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil1b-cohafuma.html';
 })
 //--> INFANTIL 2
 containerInfantil2.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil2-cohafuma.html';
 })
 //--> INFANTIL 2B
 containerInfantil2B.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil2b-cohafuma.html';
 })
 //--> INFANTIL 3
 containerInfantil3.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil3-cohafuma.html';
 })
 //--> INFANTIL 3B
 containerInfantil3B.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil3b-cohafuma.html';
 })
 //--> INFANTIL 4
 containerInfantil4.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil4-cohafuma.html';
 })
 //--> INFANTIL 4B
 containerInfantil4B.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/infantil4b-cohafuma.html';
 })
 //--> PRIMEIRO ANO
 containerPrimeiroAno.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/primeiroano-cohafuma.html';
 })
 //--> PRIMEIRO ANO B
 containerPrimeiroAnoB.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/primeiroanob-cohafuma.html';
 })
 //--> SEGUNDO ANO
 containerSegundoAno.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/segundoano-cohafuma.html';
 })
 //--> SEGUNDO ANO B
 containerSegundoAnoB.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/segundoanob-cohafuma.html';
 })
 //--> REFORÇO
 containerReforco.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/reforco-cohafuma.html';
 })
 //--> MINI MATERNAL
 containerMiniMaternal.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohafuma/refeitorio-cohafuma.html';
+    window.location.href = '../../monitoramento/cohafuma/minimaternal-cohafuma.html';
 })
 
 
@@ -366,21 +339,21 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- BERÇÁRIO -->
-            <div class="item__container item-bercario hidden">
+            <div class="item__container item-bercario">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
               <h1 class="item-titulo">Berçário</h1>
             </div>
             <!-- BERÇÁRIO 2 -->
-            <div class="item__container item-bercario hidden">
+            <div class="item__container item-bercario">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
               <h1 class="item-titulo">Berçário 2</h1>
             </div>
             <!-- BERÇÁRIO 3 -->
-            <div class="item__container item-bercario hidden">
+            <div class="item__container item-bercario">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -395,7 +368,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 1 -->
-        <div class="item__container item-infantil-1 hidden">
+        <div class="item__container item-infantil-1">
           <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
             src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
             allowfullscreen></iframe>
@@ -410,7 +383,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 1B -->
-        <div class="item__container item-infantil-1b hidden">
+        <div class="item__container item-infantil-1b">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -425,7 +398,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 2 -->
-            <div class="item__container item-infantil-2 hidden">
+            <div class="item__container item-infantil-2">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -440,7 +413,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 2B -->
-            <div class="item__container item-infantil-2b hidden">
+            <div class="item__container item-infantil-2b">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -455,7 +428,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 3 -->
-            <div class="item__container item-infantil-3 hidden">
+            <div class="item__container item-infantil-3">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -470,7 +443,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 3B -->
-            <div class="item__container item-infantil-3b hidden">
+            <div class="item__container item-infantil-3b">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -485,7 +458,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 4 -->
-            <div class="item__container item-infantil-4 hidden">
+            <div class="item__container item-infantil-4">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -500,7 +473,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- INFANTIL 4B -->
-            <div class="item__container item-infantil-4b hidden">
+            <div class="item__container item-infantil-4b">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -515,7 +488,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
         
         containerMulticameras.innerHTML += `
         <!-- PRIMEIRO ANO -->
-            <div class="item__container item-primeiroano hidden">
+            <div class="item__container item-primeiroano">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -530,7 +503,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- PRIMEIRO ANO B -->
-            <div class="item__container item-primeiroanob hidden">
+            <div class="item__container item-primeiroanob">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -545,7 +518,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- SEGUNDO ANO -->
-            <div class="item__container item-segundoano hidden">
+            <div class="item__container item-segundoano">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -560,7 +533,7 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- SEGUNDO ANO B -->
-            <div class="item__container item-segundoanob hidden">
+            <div class="item__container item-segundoanob">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -577,14 +550,14 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- REFORÇO -->
-            <div class="item__container item-reforco hidden">
+            <div class="item__container item-reforco">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
               <h1 class="item-titulo">Reforço</h1>
             </div>
             <!-- REFORÇO 2 -->
-            <div class="item__container item-reforco hidden">
+            <div class="item__container item-reforco">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
@@ -599,14 +572,14 @@ function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
         containerMulticameras.innerHTML += `
         <!-- MINI MATERNAL -->
-            <div class="item__container item-minimaternal hidden">
+            <div class="item__container item-minimaternal">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
               <h1 class="item-titulo">Mini Maternal</h1>
             </div>
             <!-- REFEITÓRIO MINI -->
-            <div class="item__container item-refeitorio hidden">
+            <div class="item__container item-refeitorio">
               <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
                 src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
                 allowfullscreen></iframe>
