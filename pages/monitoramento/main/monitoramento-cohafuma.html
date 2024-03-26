@@ -8,31 +8,25 @@
   <link href="../../../css/reset.css" rel="stylesheet" type="text/css" />
   <link href="../../../css/monitoramento-main-estilos.css" rel="stylesheet" type="text/css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <script>
     function mostrarPagina() {
       const elementoLoading = document.querySelector('.loading');
       const elementoPagina = document.querySelector('.pagina');
-
       elementoLoading.classList.add('hidden');
       elementoPagina.classList.remove('hidden');
     }
   </script>
-
 </head>
-
 <!-- Inclua a biblioteca Lottie -->
 <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player"></script>
 
-<body>
-  <div class="loading hidden" style="background-color: white; height: 100vh; width: 100vw; position: relative;">
+<body onload="mostrarPagina()">
+  <div class="loading" style="background-color: white; height: 100vh; width: 100vw; position: relative;">
     <iframe src="https://lottie.host/embed/fcc5d9e9-1c69-40c8-8a43-6eaa5b09339f/rkb5aHGfUz.json" style="position: absolute; bottom: 40vh; left: 50%;
     transform: translatex(-50%);"></iframe>
   </div>
-  <div class="pagina">
+  <div class="pagina hidden">
     <section class="container-principal">
       <div class="arrow-left">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="pink" class="bi bi-arrow-left-short"
@@ -61,7 +55,6 @@
             <div id="botao-multicameras">Multicâmeras</div>
           </li>
         </ul>
-
         <!-- SWIPER ÁREAS DA ESCOLA -->
         <div class="areasdaescola pageView-page">
           <div class="swiper mySwiper">
@@ -118,7 +111,6 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-
         <!-- SWIPER SAlAS DE AULA -->
         <div class="salasdeaula pageView-page areas-none">
           <div class="swiper mySwiper" data-page="salasdeaula">
@@ -247,9 +239,15 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-        
-    </section>
 
+        <!-- ROW MULTICAMERAS -->>
+        <div class="multicameras row-multicameras pageView-page areas-none" data-page="multicameras">
+          <div class="row-multicameras__item">
+            
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="navbar__container">
       <nav class="navbar">
         <ul class="navbar__botoes">
@@ -278,7 +276,6 @@
       </nav>
     </div>
   </div>
-
   <!-- Swiper JS -->
   <script>
     function atualizarDataHora() {
@@ -287,13 +284,11 @@
     }
     // Chamar a função uma vez para exibir a data e hora atual imediatamente
     atualizarDataHora();
-
     // Chamar a função a cada segundo para atualizar a data e hora
     setInterval(atualizarDataHora, 1000);
   </script>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script type="module" src="../../../js/app/monitoramento-main-main.js" defer></script>
+  <script type="module" src="../../../js/app/monitoramento-main-main.js"></script>
 </body>
 
 </html>

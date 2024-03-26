@@ -78,12 +78,97 @@ onAuthStateChanged(auth, async (user) => {
         textoMonitoramento.textContent = `
         Acompanhe o desenvolvimento escolar de ${authenticatedUser.data().filhos} com o nosso sistema de monitoramento ao vivo
         `;
+
+        //MOSTRAR ELEMENTOS ÁREAS DA ESCOLA NO MULTICÂMERAS
+        
+        const containerMulticameras = document.querySelector('.row-multicameras__item');
+
+        containerMulticameras.innerHTML += `
+        <!-- SOCIOEMOCIONAL -->
+            <div class="item__container item-socioemocional">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Socioemocional</h1>
+            </div>
+            <!-- MULTIDISCIPLINAR -->
+            <div class="item__container item-multidisciplinar">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Multidisciplinar</h1>
+            </div>
+            <!-- MULTIDISCIPLINAR 2 -->
+            <div class="item__container item-multidisciplinar">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Multidisciplinar 2</h1>
+            </div>
+            <!-- PARQUINHO -->
+            <div class="item__container item-parquinho">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Parquinho</h1>
+            </div>
+            <!-- PARQUINHO 2 -->
+            <div class="item__container item-parquinho">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Parquinho 2</h1>
+            </div>
+            <!-- PARQUINHO 3 -->
+            <div class="item__container item-parquinho">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Parquinho 3</h1>
+            </div>
+            <!-- PARQUINHO 4 -->
+            <div class="item__container item-parquinho">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Parquinho 4</h1>
+            </div>
+            <!-- REFEITÓRIO -->
+            <div class="item__container item-refeitorio">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Refeitório</h1>
+            </div>
+            <!-- REFEITÓRIO 2 -->
+            <div class="item__container item-refeitorio">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Refeitório 2</h1>
+            </div>
+            <!-- REFEITÓRIO 3 -->
+            <div class="item__container item-refeitorio">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Refeitório 3</h1>
+            </div>
+            <!-- REFEITÓRIO 4 -->
+            <div class="item__container item-refeitorio">
+              <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+                src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHAFUMA/refeitorio.html" frameborder="0"
+                allowfullscreen></iframe>
+              <h1 class="item-titulo">Refeitório 4</h1>
+            </div>
+        `
+
         //BERCARIO
         if((authenticatedUser.data().isBercario || authenticatedUser.data().isAdmin)) {
             containerBercario.classList.add('swiper-slide');
             containerBercario.classList.remove('hidden');
 
-            webViewBercario.classList.remove('hidden');
+            
         }
         //INFANTIL 1
         if((authenticatedUser.data().isInfantil1 || authenticatedUser.data().isAdmin)) {
@@ -190,14 +275,14 @@ onAuthStateChanged(auth, async (user) => {
     } else {
         console.log("No such document!");
         alert('esta página não pode ser acessada');
-        window.location.href = '../../index.html';
+        window.location.href = '../../../index.html';
     }
 
     console.log(user);
   } else {
     console.log('não há usuário autenticado');
     alert('esta página não pode ser acessada');
-    window.location.href = '../../index.html';
+    window.location.href = '../../../index.html';
   }
 });
 
