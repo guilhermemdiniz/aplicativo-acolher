@@ -17,6 +17,13 @@ botaoVoltar.addEventListener('click', () => {
     window.location.href = '../../home.html';
 })
 
+function mostrarElementos() {
+    const elementoLoading = document.querySelector('.loading');
+    const elementoPagina = document.querySelector('.pagina');
+    elementoLoading.classList.add('hidden');
+    elementoPagina.classList.remove('hidden');
+}
+
 //------------------------------------- REGRAS DE VISUALIZAÇÃO ---------------------------------------------
 
 //CONTAINERS ÁREAS DA ESCOLA
@@ -80,7 +87,9 @@ onAuthStateChanged(auth, async (user) => {
         `;
 
         mostrarAreasDaEscolaNoMulticameras();
-        verificarVisibilidadeEMostrarSalasDeAula();
+        verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser);
+        
+        mostrarElementos();
 
     } else {
         console.log("No such document!");
@@ -346,7 +355,7 @@ function mostrarAreasDaEscolaNoMulticameras() {
         `
 }
 
-function verificarVisibilidadeEMostrarSalasDeAula() {
+function verificarVisibilidadeEMostrarSalasDeAula(authenticatedUser) {
 
     const containerMulticameras = document.querySelector('.row-multicameras__item');
 
