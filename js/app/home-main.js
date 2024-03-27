@@ -18,11 +18,11 @@ containerCohafuma.addEventListener('click', () => {
 })
 
 containerCohatrac.addEventListener('click', () => {
-  window.location.href = '../../pages/monitoramento/main/monitoramento-cohafuma.html';
+  window.location.href = '../../pages/monitoramento/main/monitoramento-cohatrac.html';
 })
 
 containerTuru.addEventListener('click', () => {
-  window.location.href = '../../pages/monitoramento/main/monitoramento-cohafuma.html';
+  window.location.href = '../../pages/monitoramento/main/monitoramento-turu.html';
 })
 
 //VERIFICAR VISIBILIDADE
