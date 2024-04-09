@@ -15,15 +15,15 @@ botaoVoltar.addEventListener('click', () => {
 //CONTAINERS ÁREAS DA ESCOLA
 const containerMindMakers = document.querySelector('.slide-mindmakers');
 const containerSocioemocional = document.querySelector('.slide-socioemocional');
-const containerGinasio = document.querySelector('.slide-ginasio');
 const containerParquinho = document.querySelector('.slide-parquinho');
 const containerRefeitorio = document.querySelector('.slide-refeitorio');
-const containerBrinquedoteca = document.querySelector('.slide-brinquedoteca');
+const containerMultidisciplinar = document.querySelector('.slide-multidisciplinar');
 
 //CONTAINERS SALAS DE AULA
 const containerBercario = document.querySelector('.slide-bercario');
 const containerInfantil1 = document.querySelector('.slide-infantil-1');
 const containerInfantil2 = document.querySelector('.slide-infantil-2');
+const containerInfantil2b = document.querySelector('slide-infantil-2b')
 const containerInfantil3 = document.querySelector('.slide-infantil-3');
 const containerInfantil4 = document.querySelector('.slide-infantil-4');
 const containerPrimeiroAno = document.querySelector('.slide-primeiroano');
@@ -49,8 +49,8 @@ onAuthStateChanged(auth, async (user) => {
         Acompanhe o desenvolvimento escolar de ${authenticatedUser.data().filhos} com o nosso sistema de monitoramento ao vivo
         `;
 
-        mostrarAreasDaEscolaNoMulticamerasCohatrac();
-        verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser);
+        mostrarAreasDaEscolaNoMulticamerasTuru();
+        verificarVisibilidadeEMostrarSalasDeAulaTuru(authenticatedUser);
     } else {
         console.log("No such document!");
         alert('esta página não pode ser acessada');
@@ -70,71 +70,65 @@ onAuthStateChanged(auth, async (user) => {
 //ÁREAS DA ESCOLA
 //--> MINDMAKERS
 containerMindMakers.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/mindmakers-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/mindmakers-turu.html';
 })
 
 //--> SOCIOEMOCIONAL
 containerSocioemocional.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/socioemocional-cohatrac.html';
-})
-
-//--> GINÁSIO
-containerGinasio.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/ginasio-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/socioemocional-turu.html';
 })
 
 //--> PARQUINHO
 containerParquinho.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/parquinho-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/parquinho-turu.html';
 })
 
 //--> REFEITORIO
 containerRefeitorio.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/refeitorio-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/refeitorio-turu.html';
 })
 
-//--> BRINQUEDOTECA
-containerBrinquedoteca.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/brinquedoteca-cohatrac.html';
+//MULTIDISCIPLINAR
+containerMultidisciplinar.addEventListener('click', () => {
+    window.location.href = '../../monitoramento/turu/multidisciplinar-turu.html';
 })
-
 
 //SALAS DE AULA
 //--> BERÇÁRIO
 containerBercario.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/bercario-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/bercario-turu.html';
 })
 //--> INFANTIL 1
 containerInfantil1.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/infantil1-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/infantil1-turu.html';
 })
 //--> INFANTIL 2
 containerInfantil2.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/infantil2-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/infantil2-turu.html';
 })
 //--> INFANTIL 3
 containerInfantil3.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/infantil3-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/infantil3-turu.html';
 })
 //--> INFANTIL 4
 containerInfantil4.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/infantil4-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/infantil4-turu.html';
 })
 //--> PRIMEIRO ANO
 containerPrimeiroAno.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/primeiroano-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/primeiroano-turu.html';
 })
 //--> SEGUNDO ANO
 containerSegundoAno.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/segundoano-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/segundoano-turu.html';
 })
 //--> REFORÇO
 containerReforco.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/reforco-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/reforco-turu.html';
 })
 //--> MINI MATERNAL
 containerMiniMaternal.addEventListener('click', () => {
-    window.location.href = '../../monitoramento/cohatrac/minimaternal-cohatrac.html';
+    window.location.href = '../../monitoramento/turu/minimaternal-turu.html';
 })
 
 //WILLIAN
@@ -186,8 +180,8 @@ for (let index = 0; index < buttonsMonitoramento.length; index++) {
 
 //FUNCÕES MONITORAMENTO
 
-//COHATRAC
-function mostrarAreasDaEscolaNoMulticamerasCohatrac() {
+//TURU
+function mostrarAreasDaEscolaNoMulticamerasTuru() {
   const containerMulticameras = document.querySelector('.row-multicameras__item');
       containerMulticameras.innerHTML += `
       <!-- MINDMAKERS FALTANDO -->
@@ -200,42 +194,56 @@ function mostrarAreasDaEscolaNoMulticamerasCohatrac() {
       <!-- SOCIOEMOCIONAL -->
           <div class="item__container item-socioemocional">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRACPLENO.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20PLENO.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Socioemocional</h1>
           </div>
-          <!-- PARQUINHO -->
+          <!-- PARQUINHO 1 -->
           <div class="item__container item-parquinho hidden">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="#" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/PARQUINHO%202%20.html" frameborder="0"
               allowfullscreen></iframe>
-            <h1 class="item-titulo">Parquinho</h1>
+            <h1 class="item-titulo">Parquinho 1</h1>
           </div>
-          <!-- REFEITÓRIO -->
+          <!-- PARQUINHO 2 -->
+          <div class="item__container item-parquinho hidden">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/PARQUINHO%203.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Parquinho 2</h1>
+          </div>
+          <!-- PARQUINHO 3 -->
+          <div class="item__container item-parquinho hidden">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20PARQUINHO%204.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Parquinho 3</h1>
+          </div>
+          <!-- REFEITÓRIO 1 -->
           <div class="item__container item-refeitorio">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC%20%20REFEITORIO.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20REFEITORIO.html" frameborder="0"
               allowfullscreen></iframe>
-            <h1 class="item-titulo">Refeitório</h1>
+            <h1 class="item-titulo">Refeitório 1</h1>
           </div>
-          <!-- BRINQUEDOTECA -->
-          <div class="item__container item-brinquedoteca">
+          <!-- REFEITÓRIO 2 -->
+          <div class="item__container item-refeitorio">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRACBRINQUEDOTECA.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20REFEITORIO2.html" frameborder="0"
               allowfullscreen></iframe>
-            <h1 class="item-titulo">Brinquedoteca</h1>
+            <h1 class="item-titulo">Refeitório 2</h1>
           </div>
-          <!-- GINÁSIO -->
-          <div class="item__container item-brinquedoteca">
+          <!-- MULTIDISCIPLINAR -->
+          <div class="item__container item-multidisciplinar">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRACBRINQUEDOTECA.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20MULTIDISCIPLINAR.html" frameborder="0"
               allowfullscreen></iframe>
-            <h1 class="item-titulo">Brinquedoteca</h1>
+            <h1 class="item-titulo">Multidisciplinar</h1>
           </div>
       `;
 }
 
-function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
+function verificarVisibilidadeEMostrarSalasDeAulaTuru(authenticatedUser) {
 
   const containerMulticameras = document.querySelector('.row-multicameras__item');
 
@@ -248,10 +256,17 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- BERÇÁRIO -->
           <div class="item__container item-bercario">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC%20BERCARIO.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20BER%C3%87ARIO.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Berçário</h1>
           </div>
+      <!-- SONO BERÇÁRIO -->
+      <div class="item__container item-bercario">
+        <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+          src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/SONO%20BER%C3%87ARIO.html" frameborder="0"
+          allowfullscreen></iframe>
+        <h1 class="item-titulo">Sono Berçário</h1>
+      </div>
       `;
   }
   //INFANTIL 1
@@ -263,7 +278,7 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- INFANTIL 1 -->
       <div class="item__container item-infantil-1">
         <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-          src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC-INFANTIL-1.html" frameborder="0"
+          src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU-INFANTIL-1.html" frameborder="0"
           allowfullscreen></iframe>
         <h1 class="item-titulo">Infantil 1</h1>
       </div>
@@ -278,11 +293,26 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- INFANTIL 2 -->
           <div class="item__container item-infantil-2">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC-INFANTIL-2.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU-INFANTIL-2.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Infantil 2</h1>
           </div>
       `;
+  }
+  //INFANTIL 2B
+  if((authenticatedUser.data().isInfantil2B || authenticatedUser.data().isAdmin)) {
+    containerInfantil2b.classList.add('swiper-slide');
+    containerInfantil2b.classList.remove('hidden');
+
+    containerMulticameras.innerHTML += `
+    <!-- INFANTIL 2B -->
+        <div class="item__container item-infantil-2b">
+          <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+            src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20MATERNAL%202B.html" frameborder="0"
+            allowfullscreen></iframe>
+          <h1 class="item-titulo">Infantil 2B</h1>
+        </div>
+    `;
   }
   //INFANTIL 3
   if((authenticatedUser.data().isInfantil3 || authenticatedUser.data().isAdmin)) {
@@ -293,7 +323,7 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- INFANTIL 3 -->
           <div class="item__container item-infantil-3">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC-INFANTIL-3.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU-INFANTIL-3.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Infantil 3</h1>
           </div>
@@ -308,7 +338,7 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- INFANTIL 4 -->
           <div class="item__container item-infantil-4">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC-INFANTIL-4.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU-INFANTIL-4.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Infantil 4</h1>
           </div>
@@ -323,7 +353,7 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- PRIMEIRO ANO -->
           <div class="item__container item-primeiroano">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC%201ANO.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20PRIMEIRO%20ANO.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Primeiro Ano</h1>
           </div>
@@ -338,7 +368,7 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- SEGUNDO ANO -->
           <div class="item__container item-segundoano">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC%202ANO.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20SEGUNDO%20ANO.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Segundo Ano</h1>
           </div>
@@ -355,7 +385,7 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- REFORÇO -->
           <div class="item__container item-reforco">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/reforco.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br//CAMERAS%20TURU/TURU%20REFOR%C3%87O.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Reforço</h1>
           </div>
@@ -370,9 +400,16 @@ function verificarVisibilidadeEMostrarSalasDeAulaCohatrac(authenticatedUser) {
       <!-- MINI MATERNAL -->
           <div class="item__container item-minimaternal">
             <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
-              src="https://acolherservices.iconnecti.com.br/CAMERAS%20COHATRAC/COHATRAC%20MINI%20MATERNAL.html" frameborder="0"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/TURU%20MINI%20MATERNAL.html" frameborder="0"
               allowfullscreen></iframe>
             <h1 class="item-titulo">Mini Maternal</h1>
+          </div>
+      <!-- REFEITÓRIO MINI -->
+          <div class="item__container item-refeitoriomini">
+            <iframe style="width: 90vw; height: 215px; margin: 40px 0 0 0; border-radius: 14px;"
+              src="https://acolherservices.iconnecti.com.br/CAMERAS%20TURU/REFEI%C3%87AO%20MINI%20MATERNAL.html" frameborder="0"
+              allowfullscreen></iframe>
+            <h1 class="item-titulo">Refeitório Mini</h1>
           </div>
       `;
   }

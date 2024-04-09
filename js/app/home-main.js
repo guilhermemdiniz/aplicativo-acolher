@@ -2,9 +2,12 @@
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 import { app } from "../app/app.js";
 import { getFirestore, collection, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 
 const elementoBemVindo = document.querySelector('.home__bem-vindo');
 const auth = getAuth(app);
+
+const storage = getStorage();
 
 //--------------------------- REGRAS DE VISUALIZAÇÃO ---------------------------
 
@@ -42,7 +45,15 @@ onAuthStateChanged(auth, async (user) => {
         Bem-vindo de volta, <br/>${authenticatedUser.data().display_name}
         `;
 
-        document.querySelector('.usuario-autenticado__foto-de-perfil').setAttribute("src", authenticatedUser.data().display_name)
+        console.log(user.uid);
+        const fotoDePerfilRef = ref(storage, `users/${user.uid}/uploads/1704754467751000.jpg`);
+        console.log(fotoDePerfilRef.root);
+
+        document.querySelector('.usuario-autenticado__foto-de-perfil').setAttribute("src", user.photoURL);
+
+        //const foto = 'https://firebasestorage.googleapis.com/v0/b/app-teste-web.appspot.com/o/users%2FZVRmELIJuxcS7kA8yjN2WqE7RaC2%2Fuploads%2F1704754467751000.jpg?alt=media&token=4029b385-295e-411f-a02b-5c1f3a92e26a';//fotoDePerfilRef;
+        //authenticatedUser.photoURL = foto;
+        console.log(fotoDePerfilRef);
 
         //COHAFUMA
         if(!(authenticatedUser.data().isPaiCohafuma || authenticatedUser.data().isAdmin)) {

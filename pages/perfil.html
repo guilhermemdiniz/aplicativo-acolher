@@ -5,14 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda Edu</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/perfil-estilos.css">
 </head>
 
 <body>
 
-    <h1>Perfil</h1>
+    <script type="module" src="../js/app/perfil-main.js"></script>
+
+    <div class="foto-de-perfil">
+        <img id="usuario-autenticado__foto-de-perfil" src="../app-assets/img/foto-de-perfil-escola-acolher.png" alt="foto de perfil de usuário">
+
+        <label for="seletor-imagem" id="botao-alterar-foto-de-perfil">Alterar Foto</label>
+        <input class="hidden" type="file" id="seletor-imagem" accept="image/*"/>
+    </div>
+
+    <section class="container">
+        <h1 class="container__nome-de-usuario">Suporte Acolher</h1>
+        <p class="container__filhos">Responsável por:<br> Aluno Acolher</p>
+        <p class="container__unidades">Unidades:<br> Cohafuma Cohatrac Turu</p>
+        <button id="botao-logout">sair</button>
+        <a class="container__botao hidden" id="botao-cadastrar-usuario" href="#">cadastrar usuario</a>
+        <a class="container__botao hidden" id="botao-editar-usuario" href="#">editar usuario</a>
+    </section>
 
     <div class="navbar__container">
         <nav class="navbar">

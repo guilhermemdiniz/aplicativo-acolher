@@ -1,4 +1,106 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor-de-fundo: #2C467F;
+    --cor-de-fundo-container: white;
+    --cor-logout: #DB3450;
+
+    --fonte-principal: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fonte-principal);
+}
+
+#usuario-autenticado__foto-de-perfil {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 70px 0 24px 0;
+}
+
+.foto-de-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#botao-alterar-foto-de-perfil, #botao-upload {
+    background-color: transparent;
+    border: 2px solid white ;
+    border-radius: 50px;
+    color: white;
+    font-size: 14px;
+    padding: 14px 24px;
+}
+
+.container {
+    background-color: var(--cor-de-fundo-container);
+    width: 90%;
+    min-height: 36vh;
+    padding: 24px 0 84px 0;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__nome-de-usuario {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 18px 0;
+    max-width: 70%;
+    text-align: center;
+}
+
+.container__filhos, .container__unidades {
+    padding: 5px 24px;
+    text-align: center;
+    color: var(--cor-de-fundo-container);
+    font-weight: 300;
+    border-radius: 24px;
+    margin: 18px 0 0 0;
+    font-size: 14px;
+    max-width: 70%;
+}
+
+.container__filhos {
+    background-color: #84B6F4;
+}
+
+.container__unidades {
+    background-color: #BC98F3;
+}
+
+.container__botao {
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #FF9DFE;
+    padding: 12px 24px;
+    color: var(--cor-de-fundo-container);
+    border-radius: 8px;
+    margin: 20px 0 0 0;
+}
+
+#botao-logout {
+    margin: 44px 0 0 0;
+    background-color: var(--cor-logout);
+    border: none;
+    color: var(--cor-de-fundo-container);
+    font-size: 16px;
+    border-radius: 24px;
+    width: 102px;
+    height: 37px;
+}
+
 .navbar__container {
     display: flex;
     justify-content: center;
@@ -34,4 +136,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.hidden {
+    display: none;
 }

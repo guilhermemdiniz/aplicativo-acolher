@@ -200,6 +200,10 @@ body {
   object-fit: cover;
 }
 
+.swiper-wrapper {
+    margin-bottom: 50px;
+}
+
 /*CSS WILLIAN*/
 .multicameras {
     display: flex;
