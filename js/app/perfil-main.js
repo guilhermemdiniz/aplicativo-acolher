@@ -1,11 +1,13 @@
 
 import { getAuth, onAuthStateChanged, updateProfile, signOut } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 import { app } from "../app/app.js";
-import { getFirestore, collection, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
+import { getFirestore, collection, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject, listAll } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js";
 
 const auth = getAuth(app);
 const storage = getStorage();
+
+const db = getFirestore(app);
 
 const textoFilhos = document.querySelector('.container__filhos');
 const textoUnidades = document.querySelector('.container__unidades');
@@ -81,38 +83,67 @@ onAuthStateChanged(auth, async (user) => {
   });
 
 function atualizarFotoDePerfil(fileName, fileItem) {
-  const upload = (items) => {
-  const storageRef = ref(storage, `images/${fileName}`); // Use ref() para obter a referência ao arquivo
+  const upload = () => {
+  const user = auth.currentUser;
+  const fotoDePerfilRef = ref(storage, `users/${user.uid}/uploads/${fileName}`);
+  const storageRef = ref(storage);
+  const pastaRef = ref(storageRef, 'images');
 
   const metadata = {
     contentType: 'image/jpeg',
   };
 
-  uploadBytes(storageRef, fileItem, metadata)
+  listAll(pastaRef).then((result) => {
+    result.items.forEach((itemRef) => {
+      deleteObject(itemRef).then(() => {
+        // File deleted successfully
+        console.log('Sucesso ao deletar arquivo.');
+      }).catch((error) => {
+        // Uh-oh, an error occurred!
+        console.log('Erro ao deletar arquivo');
+      })
+    })
+  }).catch((error) => {
+    console.error('Erro ao listar arquivos:', error);
+  });
+
+  uploadBytes(fotoDePerfilRef, fileItem, metadata)
   .then((snapshot) => {
     console.log(snapshot);
+    getDownloadURL(fotoDePerfilRef)
+    .then((url) => {
+
+      console.log("URL: " + url);
+
+      const user = auth.currentUser;
+
+      updateProfile(user, {
+        photoURL: url
+      })
+      .then(() => {
+        updateDoc(doc(db, "users", user.uid), {
+          photo_url: user.photoURL
+        })
+        .then(
+          elementoFotoDePerfilDoUsuario.setAttribute("src", url),
+          console.log("Perfil do usuário atualizado com sucesso!")
+        )
+        .catch((error) => {
+          console.log(error.message)
+        });
+      })
+      .catch((error) => {
+        console.error("Erro ao atualizar o perfil do usuário:", error);
+        alert("Erro ao carregar nova foto de perfil.");
+    });
+  });
   }, (error) => {
     console.log("ERROR: " + error);
   })
 
-  getDownloadURL(storageRef)
-  .then((url) => {
-    console.log("URL: " + url);
-    const user = auth.currentUser;
-    updateProfile(user, {
-      photoURL: url
-    }).then(() => {
-      elementoFotoDePerfilDoUsuario.setAttribute("src", url);
-      console.log("Perfil do usuário atualizado com sucesso!");
-    }).catch((error) => {
-      console.error("Erro ao atualizar o perfil do usuário:", error);
-      alert("Erro ao carregar nova foto de perfil.");
-    });
-  });
-
 };
   
-  upload(fileItem);
+  upload();
   console.log('entrar com a foto...');
 }
 

@@ -10,7 +10,7 @@ var usuarioAutenticado = false;
 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
-    var formEmail= document.getElementById('formulario_email').value;
+    var formEmail = document.getElementById('formulario_email').value;
     var formSenha = document.getElementById('formulario_senha').value;
     login(formEmail, formSenha);
   });

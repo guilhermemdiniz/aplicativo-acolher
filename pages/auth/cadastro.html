@@ -8,137 +8,176 @@
 </head>
 
 <body>
+
+    <div class="arrow-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-arrow-left-short"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+        </svg>
+    </div>
+
     <h1 class="cadastro__titulo">Cadastrar Usuário</h1>
 
     <section class="cadastro__container">
         <form class="cadastro__formulario" action="">
 
             <label for="nome"></label>
-            <input class="formulario__item" type="text" name="nome" id="nome" placeholder="Nome" required>
-
+            <input class="formulario__item formulario__nome-responsavel" type="text" name="nome" id="nome" placeholder="Nome" required>
+            
             <label for="filhos"></label>
-            <input class="formulario__item" type="text" id="filhos" name="filhos" placeholder="Filhos" required>
-
+            <input class="formulario__item formulario__nome-aluno" type="text" id="filhos" name="filhos" placeholder="Filhos" required>
+            
             <label for="email"></label>
-            <input class="formulario__item" type="text" id="email" name="email" placeholder="Email" required>
+            <input class="formulario__item formulario__email" type="text" id="email" name="email" placeholder="Email" required>
+            <div class="container-input-feedback"><p class="input-email-feedback hidden"></p></div>
 
             <label for="senha"></label>
-            <input class="formulario__item" type="text" id="senha" name="senha" placeholder="Senha" required>
+            <input class="formulario__item formulario__senha" type="text" id="senha" name="senha" placeholder="Senha" required>
+            <div class="container-input-feedback"><p class="input-feedback hidden"></p></div>
 
-            <label for="senha"></label>
-            <input class="formulario__item" type="text" id="senha" name="senha" placeholder="Confirmar senha" required>
+            <label for="senha-confirmacao"></label>
+            <input class="formulario__item formulario__senha-confirmacao" type="text" id="senha-confirmacao" name="senha-confirmacao" placeholder="Confirmar senha" required>
+            <div class="container-input-feedback"><p class="input-confirm-feedback hidden"></p></div>
 
+            <div class="cadastro__condicionais">
+                <ul class="condicionais-check">
+                    <li class="condicionais-check__item">
+                        <label for="cohafuma">Cohafuma</label>
+                        <input type="checkbox" name="cohafuma" id="cohafuma">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="cohatrac">Cohatrac</label>
+                        <input type="checkbox" name="cohatrac" id="cohatrac">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="turu">Turu</label>
+                        <input type="checkbox" name="turu" id="turu">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="admin">Admin</label>
+                        <input type="checkbox" name="admin" id="admin">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="bercario">Berçário</label>
+                        <input type="checkbox" name="bercario" id="bercario">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="minimaternal">Mini Maternal</label>
+                        <input type="checkbox" name="minimaternal" id="minimaternal">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil1">Infantil 1</label>
+                        <input type="checkbox" name="infantil1" id="infantil1">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil1b">Infantil 1B</label>
+                        <input type="checkbox" name="infantil1b" id="infantil1b">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil2">Infantil2</label>
+                        <input type="checkbox" name="infantil2" id="infantil2">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil2b">Infantil 2B</label>
+                        <input type="checkbox" name="infantil2b" id="infantil2b">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil3">Infantil 3</label>
+                        <input type="checkbox" name="infantil3" id="infantil3">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil3b">Infantil 3B</label>
+                        <input type="checkbox" name="infantil3b" id="infantil3b">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil4">Infantil 4</label>
+                        <input type="checkbox" name="infantil4" id="infantil4">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="infantil4b">Infantil 4B</label>
+                        <input type="checkbox" name="infantil4b" id="infantil4b">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="primeiroano">Primeiro Ano</label>
+                        <input type="checkbox" name="primeiroano" id="primeiroano">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="primeiroanob">Primeiro Ano B</label>
+                        <input type="checkbox" name="primeiroanob" id="primeiroanob">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="segundoano">Segundo Ano</label>
+                        <input type="checkbox" name="segundoano" id="segundoano">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="segundoanob">Segundo Ano B</label>
+                        <input type="checkbox" name="segundoanob" id="segundoanob">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="reforco">Reforço</label>
+                        <input type="checkbox" name="reforco" id="reforco">
+                    </li>
+        
+                    <li class="condicionais-check__item">
+                        <label for="contapessoal">Conta Pessoal</label>
+                        <input type="checkbox" name="contapessoal" id="contapessoal">
+                    </li>
+        
+                </ul>
+            </div>
+
+            <button type="submit" class="cadastro__botao formulario__item">Cadastrar</button>
         </form>
 
-        <button class="cadastro__botao formulario__item">Cadastrar</button>
+        <div class="navbar__container">
+            <nav class="navbar">
+                <ul class="navbar__botoes">
+                    <li class="navbar__botoes__item botao-home">
+                        <a href="../home.html">
+                            <img src="../../app-assets/icons/casa.png" alt="icone home">
+                        </a>
+                    </li>
+                    <li class="navbar__botoes__item botao-agenda">
+                        <a href="../agenda.html">
+                            <img src="../../app-assets/icons/agenda.png" alt="icone agenda">
+                        </a>
+                    </li>
+                    <li class="navbar__botoes__item botao-feed">
+                        <a href="../feed.html">
+                            <img src="../../app-assets/icons/feed.png" alt="icone feed">
+                        </a>
+                    </li>
+                    <li class="navbar__botoes__item boto-perfil">
+                        <a href="../perfil.html">
+                            <img src="../../app-assets/icons/perfil.png" alt="icone perfil">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
     </section>
 
-    <section class="cadastro__condicionais">
-        <ul class="condicionais-check">
-
-            <li class="condicionais-check__item">
-                <label for="cohafuma">Cohafuma</label>
-                <input type="checkbox" name="cohafuma" id="cohafuma">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="cohatrac">Cohatrac</label>
-                <input type="checkbox" name="cohatrac" id="cohatrac">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="turu">Turu</label>
-                <input type="checkbox" name="turu" id="turu">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="admin">Admin</label>
-                <input type="checkbox" name="admin" id="admin">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="bercario">Berçário</label>
-                <input type="checkbox" name="bercario" id="bercario">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="minimaternal">Mini Maternal</label>
-                <input type="checkbox" name="minimaternal" id="minimaternal">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil1">Infantil 1</label>
-                <input type="checkbox" name="infantil1" id="infantil1">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil1b">Infantil 1B</label>
-                <input type="checkbox" name="infantil1b" id="infantil1b">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil2">Infantil2</label>
-                <input type="checkbox" name="infantil2" id="infantil2">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil2b">Infantil 2B</label>
-                <input type="checkbox" name="infantil2b" id="infantil2b">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil3">Infantil 3</label>
-                <input type="checkbox" name="infantil3" id="infantil3">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil3b">Infantil 3B</label>
-                <input type="checkbox" name="infantil3b" id="infantil3b">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil4">Infantil 4</label>
-                <input type="checkbox" name="infantil4" id="infantil4">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="infantil4b">Infantil 4B</label>
-                <input type="checkbox" name="infantil4b" id="infantil4b">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="primeiroano">Primeiro Ano</label>
-                <input type="checkbox" name="primeiroano" id="primeiroano">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="primeiroanob">Primeiro Ano B</label>
-                <input type="checkbox" name="primeiroanob" id="primeiroanob">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="segundoano">Segundo Ano</label>
-                <input type="checkbox" name="segundoano" id="segundoano">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="segundoanob">Segundo Ano B</label>
-                <input type="checkbox" name="segundoanob" id="segundoanob">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="reforco">Reforço</label>
-                <input type="checkbox" name="reforco" id="reforco">
-            </li>
-
-            <li class="condicionais-check__item">
-                <label for="contapessoal">Conta Pessoal</label>
-                <input type="checkbox" name="contapessoal" id="contapessoal">
-            </li>
-
-        </ul>
-    </section>
+    <script type="module" src="../../js/app/cadastro-main.js"></script>
 
 </body>
 
